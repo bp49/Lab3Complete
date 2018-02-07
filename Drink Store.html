@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>Drink Order</h1>
+    <link rel="Styles.css" type="text/css" href="Styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+    <script src="Javascript.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>Customer Name: <input type="text" id="CustomerName" name="CustomerName" /></div>
+    <form>
+        <br />
+        <div class="SelectDrink">
+            Beverage: &nbsp; <select id="DrinkType">
+                <option value="Soda">Soda</option>
+                <option value="Water">Water</option>
+                <option value="Beer">Beer</option>
+                <option value="Wine">Wine</option>
+            </select>
+        </div>
+    </form>
+    <div class="SelectDrinkSize">
+        <form id="DrinkSize">
+            <div class="form-check">
+                <label1><input type="radio" name="Size" value="0"> Small</label1>
+            </div>
+            <div class="form-check">
+                <label2><input type="radio" name="Size" value="1" checked> Medium</label2>
+            </div>
+            <div class="form-check">
+                <label3><input type="radio" name="Size" value="2"> Large</label3>
+            </div>
+        </form>
+
+    </div>
+    Quantity: <input type="number" id="QuantityNumber" value="Quantity" />
+    <button type="button" id="SubmitButton" class="btn btn-info">Place Order</button>
+    <span id="Test"></span><br />
+    <input type="text" id="AgeVerificationBox" value= "MM/DD/YY" hidden /><br />
+    <div id="MainReceipt" class="panel panel-primary" hidden>
+        <div class="panel-heading">
+            <h4>Receipt</h4>
+        </div>
+        <span id="ReceiptResult" class="panel-footer">
+        </span><br />
+
+    </div>
+    <div id="InvalidAge"class="panel panel-primary panel-default" hidden>
+        <div class="panel-heading">
+            <h4>Must be Born before</h4>
+        </div>
+        <span id="InvalidDateEntry" class="panel-footer">
+        </span><br />
+
+    </div>
+</body>
+</html>
